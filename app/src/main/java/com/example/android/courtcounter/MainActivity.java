@@ -100,27 +100,68 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 
+    public void correctMinusThree(String message) {
+
+        Button correctThreePointsA = findViewById(R.id.team_a_three_points);
+        Button correctThreePointsB = findViewById(R.id.team_b_three_points);
+        correctThreePointsB.setText(message);
+        correctThreePointsA.setText(message);
+
+    }
+
+    public void correctPlusThree(String message) {
+
+        Button correctThreePointsA = findViewById(R.id.team_a_three_points);
+        Button correctThreePointsB = findViewById(R.id.team_b_three_points);
+        correctThreePointsB.setText(message);
+        correctThreePointsA.setText(message);
+
+    }
+
+
+    public void correctMinusTwo(String message) {
+
+        Button correctTwoPointsA = findViewById(R.id.team_a_two_points);
+        Button correctTwoPointsB = findViewById(R.id.team_b_two_points);
+        correctTwoPointsB.setText(message);
+        correctTwoPointsA.setText(message);
+
+    }
+
+    public void correctPlusTwo(String message) {
+
+        Button correctTwoPointsA = findViewById(R.id.team_a_two_points);
+        Button correctTwoPointsB = findViewById(R.id.team_b_two_points);
+        correctTwoPointsB.setText(message);
+        correctTwoPointsA.setText(message);
+
+    }
+
+    public void correctMinusOne(String message) {
+
+        Button correctOnePointA = findViewById(R.id.team_a_free_throw);
+        Button correctOnePointB = findViewById(R.id.team_b_free_throw);
+        correctOnePointA.setText(message);
+        correctOnePointB.setText(message);
+
+    }
+
+    public void correctPlusOne(String message) {
+
+        Button correctOnePointA = findViewById(R.id.team_a_free_throw);
+        Button correctOnePointB = findViewById(R.id.team_b_free_throw);
+        correctOnePointA.setText(message);
+        correctOnePointB.setText(message);
+
+    }
+
     public void correctScore(View view) {
         if (x == 0) {
             x = x + 1;
 
-            Button correctThreePointsA = findViewById(R.id.team_a_three_points);
-            correctThreePointsA.setText("- 3 points");
-
-            Button correctTwoPointsA = findViewById(R.id.team_a_two_points);
-            correctTwoPointsA.setText("- 2 points");
-
-            Button correctOnePointA = findViewById(R.id.team_a_free_throw);
-            correctOnePointA.setText("- 1 point");
-
-            Button correctThreePointsB = findViewById(R.id.team_b_three_points);
-            correctThreePointsB.setText("- 3 points");
-
-            Button correctTwoPointsB = findViewById(R.id.team_b_two_points);
-            correctTwoPointsB.setText("- 2 points");
-
-            Button correctOnePointB = findViewById(R.id.team_b_free_throw);
-            correctOnePointB.setText("- 1 point");
+            correctMinusThree("- 3 points");
+            correctMinusTwo("- 2 points");
+            correctMinusOne("- 1 point");
 
             Button buttonFinish = findViewById(R.id.correct_button);
             buttonFinish.setText("Finish");
@@ -129,23 +170,9 @@ public class MainActivity extends AppCompatActivity {
         } else {
             x = x - 1;
 
-            Button correctThreePointsA = findViewById(R.id.team_a_three_points);
-            correctThreePointsA.setText("+3 points");
-
-            Button correctTwoPointsA = findViewById(R.id.team_a_two_points);
-            correctTwoPointsA.setText("+2 points");
-
-            Button correctOnePointA = findViewById(R.id.team_a_free_throw);
-            correctOnePointA.setText("Free throw");
-
-            Button correctThreePointsB = findViewById(R.id.team_b_three_points);
-            correctThreePointsB.setText("+ 3 points");
-
-            Button correctTwoPointsB = findViewById(R.id.team_b_two_points);
-            correctTwoPointsB.setText("+ 2 points");
-
-            Button correctOnePointB = findViewById(R.id.team_b_free_throw);
-            correctOnePointB.setText("Free throw");
+            correctPlusThree("+3 points");
+            correctPlusTwo("+2 points");
+            correctPlusOne("Free throw");
 
             Button buttonFinish = findViewById(R.id.correct_button);
             buttonFinish.setText("Correct");
